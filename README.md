@@ -34,7 +34,6 @@ path is the unique bucket name to serve
 ## Todo
 
 - delete object ability
-- serve website ability
 
 ## Authors
 
