@@ -30,6 +30,15 @@ path is the unique bucket name to serve
 | Command         | 	Description         | Defaults  |
 | -------------  |-------------|-------------|
 |`-h` or `--help` |Print this list and exit. |   |
+|`-w` or `--web` |Serve a website. |   |
+
+## Serve a static website
+
+`index.html` file must be present at the bucket root
+
+```bash
+s3-http-server my-bucket-name -w
+```
 
 ## Todo
 
