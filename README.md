@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://github.com/rowlinsonmike/s3-http-server/docs/logo.svg" width="150" title="logo">
+  <img src="https://github.com/rowlinsonmike/s3-http-server/blob/main/docs/logo.svg" width="150" title="logo">
 </p>
   <h1 align="center" >S3 HTTP Server</h1>
   <p align="center"><i>A simple command-line S3 http server</i></p>
