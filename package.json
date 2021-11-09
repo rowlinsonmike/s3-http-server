@@ -1,0 +1,42 @@
+{
+  "name": "s3-http-server",
+  "version": "1.0.0",
+  "description": "A simple command-line S3 http server",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rowlinsonmike/s3-http-server.git"
+  },
+  "keywords": [
+    "cli",
+    "command",
+    "static",
+    "http",
+    "s3",
+    "aws",
+    "server"
+  ],
+  "scripts": {
+    "start": "node ./bin/s3-http-server"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "author": "rowlinsonmike@gmail.com",
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "s3-http-server": "./bin/s3-http-server.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1024.0",
+    "express": "^4.17.1",
+    "formidable": "^2.0.1",
+    "minimist": "^1.2.5",
+    "pug": "^3.0.2"
+  }
+}

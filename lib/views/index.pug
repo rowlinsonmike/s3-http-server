@@ -1,0 +1,53 @@
+html
+  head
+    title S3 HTTP
+    script.
+        function downloadItem(key){
+            //download and item from s3 bucket
+            window.open('/' + key)
+        }
+        window.onload = function() {
+            //upload file immediately once file selected 
+            document.getElementById("upload_form").onchange = function() {
+                // submitting the form
+                document.getElementById("upload_form").submit();
+            };
+        };
+  style. 
+     body {
+     }
+     ul {
+         list-style: none;
+     }
+     .row{
+         display: flex;
+         padding: 5px 0;
+         cursor: pointer;
+     }
+     img{
+         padding-right: 10px;
+     }
+     .upload{
+        background-color: indigo;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+     }
+  body
+    h1 
+        a(href="/") Index of #{bucket}/ 
+        span #{Prefix}
+    form(id="upload_form" method="post",enctype="multipart/form-data")
+        input(class="btn upload-btn",type="file",name="filetoupload",id="filetoupload",hidden)
+        label(class="upload", for="filetoupload") Upload File
+    ul
+        each object in data
+            div(class="row")
+                if object.isDir
+                    img(src="/static/folder_icon.png", height="15px")
+                    a(href="/" + object.Key) #{object.Key}
+                else 
+                    img(src="/static/file_icon.png", height="15px")
+                    a(onclick=`downloadItem("${object.Key}")`)= object.Key
