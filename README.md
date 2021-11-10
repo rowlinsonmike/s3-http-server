@@ -7,8 +7,9 @@
 
 <br/>
 <p>
-`s3-http-server` makes your S3 files available via a HTTP interface without making the objects public. The provided website also provides upload functionality.
+This cli makes your S3 objects available via a HTTP interface. A simple website interface is provided for navigation and uploading. Another use case is serving a static website using the `-w` switch. 
 </p>
+
 
 ## Installation
 
@@ -18,11 +19,14 @@ npm install --global s3-http-server
 
 ## Usage
 
+*Make sure you have AWS credentials available in the environment you execute the package in.*
+
 ```
 s3-http-server [path] [options]
 ```
 
 path is the unique bucket name to serve
+
 *Now you can visit http://localhost:8080 to view your server*
 
 ## Available Options
